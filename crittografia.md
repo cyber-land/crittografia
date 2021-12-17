@@ -34,6 +34,8 @@ La crittografia è un insieme di procedure ideate allo scopo di nascondere il si
   
   - **Asimmetrica (2, RSA)**: ogni soggetto ha una chiave pubblica ed una privata
 
+---
+
 ### DES (Data Encryption Standard)
 
 Algoritmo simmetrico a blocchi
@@ -96,6 +98,8 @@ Passaggi:
 
 Si è dimostrata la vulnerabilità del DES nel 1998, l'anno successivo è stato introdotto il **tripleDES (3DES)** che utilizza una chiave di lunghezza tripla (168 bit) per poter operare tre iterazioni del DES consecutive
 
+**Cosiderazioni Finali**
+
 la sola differenza tra la cifratura e la decifratura è che le sottochiavi sono applicate nell'ordine inverso nella fase di decifratura
 
 ### RSA
@@ -121,8 +125,10 @@ They use certain variables and parameters, all of which are explained below:
 
 Once you generate the keys, you pass the parameters to the functions that calculate your ciphertext and plaintext using the respective key.
 
-- If the plaintext is m, ciphertext = me mod n.
-- If the ciphertext is c, plaintext = cd mod n
+- If the plaintext is m, ciphertext = $m^e$ mod n
+- If the ciphertext is c, plaintext = $c^d$ mod n
+
+**Example**
 
 To understand the above steps better, you can take an example where **p**=11 and **q**=3
 
@@ -148,7 +154,11 @@ $c^d$ mod n = $20^3$%33 = 14
 
 You can now look at the factors that make the RSA algorithm stand out versus its competitors in the advantages section.
 
+**Considerazioni finali**
+
 Si può generare per prima la chiave privata e successivamente quella pubblica siccome sono legate da un rapporto moltiplicazione e godono della proprietà commutativa
+
+---
 
 ### Firma digitale
 
